@@ -67,8 +67,9 @@ class ViewController: UIViewController {
     }
     
     @objc func signButtonPressed() {
-        let vc = LocationViewController()
+        let vc = AutoLayoutEx2ViewController()
         
+        vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
     }
 

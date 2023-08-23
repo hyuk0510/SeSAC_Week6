@@ -67,10 +67,10 @@ class ViewController: UIViewController {
     }
     
     @objc func signButtonPressed() {
-        let vc = AutoLayoutEx2ViewController()
-        
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
+        let vc = LocationViewController()
+        let nav = UINavigationController(rootViewController: vc)
+//        vc.modalPresentationStyle = .overFullScreen
+        present(nav, animated: true)
     }
 
     func setLayoutAnchor() {

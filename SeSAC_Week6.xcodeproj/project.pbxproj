@@ -20,6 +20,7 @@
 		D8E3AFF52A94986800717539 /* AutoLayoutEx1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFF42A94986800717539 /* AutoLayoutEx1ViewController.swift */; };
 		D8E3AFF82A94A09700717539 /* AutoLayoutEx2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFF72A94A09700717539 /* AutoLayoutEx2ViewController.swift */; };
 		D8E3AFFA2A96292800717539 /* sampleCode_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFF92A96292800717539 /* sampleCode_map.swift */; };
+		D8E3AFFD2A962B5400717539 /* TheaterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFFC2A962B5400717539 /* TheaterLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D8E3AFF42A94986800717539 /* AutoLayoutEx1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutEx1ViewController.swift; sourceTree = "<group>"; };
 		D8E3AFF72A94A09700717539 /* AutoLayoutEx2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutEx2ViewController.swift; sourceTree = "<group>"; };
 		D8E3AFF92A96292800717539 /* sampleCode_map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleCode_map.swift; sourceTree = "<group>"; };
+		D8E3AFFC2A962B5400717539 /* TheaterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				D8E3AFFB2A96293700717539 /* Data */,
 				D8E3AFF62A94986D00717539 /* AutoLayout */,
 				D8E3AFF22A94792E00717539 /* LocationViewController.swift */,
+				D8E3AFFC2A962B5400717539 /* TheaterLocationViewController.swift */,
 				D8E3AFED2A94464B00717539 /* Test */,
 				D8E3AFD22A9309FD00717539 /* AppDelegate.swift */,
 				D8E3AFD42A9309FD00717539 /* SceneDelegate.swift */,
@@ -191,6 +194,7 @@
 				D8E3AFF12A945CA800717539 /* TextViewController.swift in Sources */,
 				D8E3AFFA2A96292800717539 /* sampleCode_map.swift in Sources */,
 				D8E3AFEF2A94468100717539 /* SnapViewController.swift in Sources */,
+				D8E3AFFD2A962B5400717539 /* TheaterLocationViewController.swift in Sources */,
 				D8E3AFD72A9309FD00717539 /* ViewController.swift in Sources */,
 				D8E3AFF82A94A09700717539 /* AutoLayoutEx2ViewController.swift in Sources */,
 				D8E3AFF32A94792E00717539 /* LocationViewController.swift in Sources */,

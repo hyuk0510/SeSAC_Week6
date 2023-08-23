@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 //1. 객체 얹이고, 레이아웃 잡고, 아웃렛 연결, 속성 조절
 
@@ -25,12 +26,14 @@ class ViewController: UIViewController {
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
     let signButton = UIButton()
+    let theaterButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
+        view.addSubview(theaterButton)
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -64,6 +67,22 @@ class ViewController: UIViewController {
         passwordTextField.backgroundColor = .darkGray
         
         setLayoutAnchor()
+        setTheaterButton()
+    }
+
+    func setLayoutAnchor() {
+        view.addSubview(signButton)
+        
+        signButton.backgroundColor = .green
+        signButton.setTitle("실습", for: .normal)
+        signButton.tintColor = .white
+//        signButton.addTarget(self, action: #selector(signButtonPressed), for: .touchUpInside)
+        
+        signButton.snp.makeConstraints { make in
+            make.leading.equalTo(emailTextField.snp.leading)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.width.equalTo(150)
+        }
     }
     
     @objc func signButtonPressed() {
@@ -72,22 +91,25 @@ class ViewController: UIViewController {
 //        vc.modalPresentationStyle = .overFullScreen
         present(nav, animated: true)
     }
-
-    func setLayoutAnchor() {
-        view.addSubview(signButton)
-        signButton.translatesAutoresizingMaskIntoConstraints = false
+    
+    func setTheaterButton() {
+        theaterButton.backgroundColor = .purple
+        theaterButton.setTitle("영화관", for: .normal)
+        theaterButton.tintColor = .white
+        theaterButton.addTarget(self, action: #selector(theaterButtonPressed), for: .touchUpInside)
         
-        signButton.backgroundColor = .blue
-        signButton.addTarget(self, action: #selector(signButtonPressed), for: .touchUpInside)
+        theaterButton.snp.makeConstraints { make in
+            make.leading.equalTo(signButton.snp.trailing).offset(20)
+            make.trailing.equalTo(emailTextField.snp.trailing)
+            make.bottom.equalTo(signButton.snp.bottom)
+        }
+    }
+    
+    @objc func theaterButtonPressed() {
+        let vc = TheaterLocationViewController()
+        vc.modalPresentationStyle = .fullScreen
         
-        NSLayoutConstraint.activate([
-            signButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            signButton.widthAnchor.constraint(equalToConstant: 300),
-            signButton.heightAnchor.constraint(equalToConstant: 50),
-            signButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        
-        
-        ])
+        present(vc, animated: true)
     }
 
 }

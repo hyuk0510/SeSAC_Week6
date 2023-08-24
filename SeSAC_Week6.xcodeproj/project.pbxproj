@@ -25,6 +25,8 @@
 		D8E3B0052A971CE200717539 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0042A971CE200717539 /* CustomViewController.swift */; };
 		D8E3B0072A971E9300717539 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0062A971E9300717539 /* BlackRadiusTextField.swift */; };
 		D8E3B0092A972A1200717539 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0082A972A1200717539 /* CustomTableViewController.swift */; };
+		D8E3B00F2A973E1A00717539 /* MovieAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B00E2A973E1A00717539 /* MovieAutoLayoutViewController.swift */; };
+		D8E3B0112A97500300717539 /* NetflixAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0102A97500300717539 /* NetflixAutoLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		D8E3B0042A971CE200717539 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		D8E3B0062A971E9300717539 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 		D8E3B0082A972A1200717539 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		D8E3B00E2A973E1A00717539 /* MovieAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		D8E3B0102A97500300717539 /* NetflixAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixAutoLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			children = (
 				D8E3AFF42A94986800717539 /* AutoLayoutEx1ViewController.swift */,
 				D8E3AFF72A94A09700717539 /* AutoLayoutEx2ViewController.swift */,
+				D8E3B00E2A973E1A00717539 /* MovieAutoLayoutViewController.swift */,
+				D8E3B0102A97500300717539 /* NetflixAutoLayoutViewController.swift */,
 			);
 			path = AutoLayout;
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 				D8E3AFF12A945CA800717539 /* TextViewController.swift in Sources */,
 				D8E3AFFA2A96292800717539 /* sampleCode_map.swift in Sources */,
 				D8E3AFEF2A94468100717539 /* SnapViewController.swift in Sources */,
+				D8E3B0112A97500300717539 /* NetflixAutoLayoutViewController.swift in Sources */,
 				D8E3AFFD2A962B5400717539 /* TheaterLocationViewController.swift in Sources */,
+				D8E3B00F2A973E1A00717539 /* MovieAutoLayoutViewController.swift in Sources */,
 				D8E3B0092A972A1200717539 /* CustomTableViewController.swift in Sources */,
 				D8E3AFD72A9309FD00717539 /* ViewController.swift in Sources */,
 				D8E3AFF82A94A09700717539 /* AutoLayoutEx2ViewController.swift in Sources */,

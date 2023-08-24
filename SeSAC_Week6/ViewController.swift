@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         signButton.backgroundColor = .green
         signButton.setTitle("실습", for: .normal)
         signButton.tintColor = .white
-//        signButton.addTarget(self, action: #selector(signButtonPressed), for: .touchUpInside)
+        signButton.addTarget(self, action: #selector(signButtonPressed), for: .touchUpInside)
         
         signButton.snp.makeConstraints { make in
             make.leading.equalTo(emailTextField.snp.leading)
@@ -86,10 +86,8 @@ class ViewController: UIViewController {
     }
     
     @objc func signButtonPressed() {
-        let vc = LocationViewController()
-        let nav = UINavigationController(rootViewController: vc)
-//        vc.modalPresentationStyle = .overFullScreen
-        present(nav, animated: true)
+       
+        transition(storyboard: "Main", style: .presentFullNavigation, viewController: GenericViewController.self)
     }
     
     func setTheaterButton() {

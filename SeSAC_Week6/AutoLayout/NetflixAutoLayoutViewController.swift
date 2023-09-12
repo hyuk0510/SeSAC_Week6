@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class NetflixAutoLayoutViewController: UIViewController {
 
@@ -18,33 +17,35 @@ class NetflixAutoLayoutViewController: UIViewController {
         return label
     }()
     
-    lazy var emailTextField = {
-        let textField = UITextField()
-        designTextField(textField, "이메일 주소 또는 전화번호")
+    let emailTextField = {
+        let textField = CornerRadiusTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "이메일 주소 또는 전화번호", attributes: [.foregroundColor: UIColor.white])
+        
         return textField
     }()
     
-    lazy var passwordTextField = {
-        let textField = UITextField()
-        designTextField(textField, "비밀번호")
+    let passwordTextField = {
+        let textField = CornerRadiusTextField()
+        textField.isSecureTextEntry = true
+        textField.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor.white])
         return textField
     }()
     
-    lazy var nicknameTextField = {
-        let textField = UITextField()
-        designTextField(textField, "닉네임")
+    let nicknameTextField = {
+        let textField = CornerRadiusTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "닉네임", attributes: [.foregroundColor: UIColor.white])
         return textField
     }()
     
-    lazy var locationTextField = {
-        let textField = UITextField()
-        designTextField(textField, "위치")
+    let locationTextField = {
+        let textField = CornerRadiusTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "위치", attributes: [.foregroundColor: UIColor.white])
         return textField
     }()
     
-    lazy var recommendCodeTextField = {
-        let textField = UITextField()
-        designTextField(textField, "추천 코드 입력")
+    let recommendCodeTextField = {
+        let textField = CornerRadiusTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "추천 코드 입력", attributes: [.foregroundColor: UIColor.white])
         return textField
     }()
     
@@ -77,9 +78,74 @@ class NetflixAutoLayoutViewController: UIViewController {
         return switchch
     }()
     
+    var viewModel = NetflixModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(UserDefaults.standard.string(forKey: "email") ?? "")
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonPressed), for: .touchUpInside)
+        emailTextField.addTarget(self, action: #selector(emailTextFieldPressed), for: .editingChanged)
+        nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldPressed), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordTextFieldPressed), for: .editingChanged)
+        locationTextField.addTarget(self, action: #selector(locationTextFieldPressed), for: .editingChanged)
+        recommendCodeTextField.addTarget(self, action: #selector(recommendCodeTextFieldPressed), for: .editingChanged)
+
+        viewModel.list.bind { data in
+            self.emailTextField.text = data.email
+            self.nicknameTextField.text = data.nickName
+            self.passwordTextField.text = data.pw
+            self.locationTextField.text = data.location
+            self.recommendCodeTextField.text = data.code
+        }
+        
+        viewModel.isValid.bind { bool in
+            self.signUpButton.isEnabled = bool
+            self.signUpButton.backgroundColor = bool ? .green : .red
+        }
+        
+        configure()
+        setConstraints()
+    }
+    
+    @objc func signUpButtonPressed() {
+        viewModel.signIn {
+            let alert = UIAlertController(title: "로그인 되었습니다.", message: nil, preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "확인", style: .default)
+            
+            alert.addAction(cancel)
+            
+            present(alert, animated: true)
+        }
+    }
+    
+    @objc func emailTextFieldPressed() {
+        viewModel.isValidInput()
+        viewModel.list.value.email = emailTextField.text!
+    }
+    
+    @objc func nicknameTextFieldPressed() {
+        viewModel.isValidInput()
+        viewModel.list.value.nickName = nicknameTextField.text!
+    }
+    
+    @objc func passwordTextFieldPressed() {
+        viewModel.isValidInput()
+        viewModel.list.value.pw = passwordTextField.text!
+    }
+    
+    @objc func locationTextFieldPressed() {
+        viewModel.isValidInput()
+        viewModel.list.value.location = locationTextField.text!
+    }
+    
+    @objc func recommendCodeTextFieldPressed() {
+        viewModel.isValidInput()
+        viewModel.list.value.code = recommendCodeTextField.text!
+    }
+    
+    func configure() {
         let subViewList = [titleLabel, emailTextField, passwordTextField, nicknameTextField, locationTextField, recommendCodeTextField, signUpButton, extraInfoLabel, switchch]
         
         for subview in subViewList {
@@ -87,7 +153,6 @@ class NetflixAutoLayoutViewController: UIViewController {
         }
                 
         view.backgroundColor = .black
-        setConstraints()
     }
     
     func setConstraints() {
@@ -141,11 +206,4 @@ class NetflixAutoLayoutViewController: UIViewController {
         }
     }
     
-    func designTextField(_ tf: UITextField, _ placeholder: String) {
-        tf.layer.cornerRadius = 5
-        tf.backgroundColor = .gray
-        tf.textAlignment = .center
-        tf.attributedPlaceholder = NSAttributedString(string: placeholder,attributes: [.foregroundColor: UIColor.white])
-    }
-
 }

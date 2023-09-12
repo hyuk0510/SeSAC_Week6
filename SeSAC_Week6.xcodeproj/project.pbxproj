@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D851F37F2AB069E300081AD5 /* CornerRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D851F37E2AB069E300081AD5 /* CornerRadiusTextField.swift */; };
+		D851F3812AB06C7900081AD5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D851F3802AB06C7900081AD5 /* Observable.swift */; };
+		D851F3862AB06D1C00081AD5 /* NetflixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D851F3852AB06D1C00081AD5 /* NetflixModel.swift */; };
 		D8E3AFD32A9309FD00717539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFD22A9309FD00717539 /* AppDelegate.swift */; };
 		D8E3AFD52A9309FD00717539 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFD42A9309FD00717539 /* SceneDelegate.swift */; };
 		D8E3AFD72A9309FD00717539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3AFD62A9309FD00717539 /* ViewController.swift */; };
@@ -27,9 +30,15 @@
 		D8E3B0092A972A1200717539 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0082A972A1200717539 /* CustomTableViewController.swift */; };
 		D8E3B00F2A973E1A00717539 /* MovieAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B00E2A973E1A00717539 /* MovieAutoLayoutViewController.swift */; };
 		D8E3B0112A97500300717539 /* NetflixAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0102A97500300717539 /* NetflixAutoLayoutViewController.swift */; };
+		D8E3B0162A982B0000717539 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0152A982B0000717539 /* CustomTableViewCell.swift */; };
+		D8E3B0182A9840AB00717539 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B0172A9840AB00717539 /* PosterImageView.swift */; };
+		D8E3B01B2A984B5500717539 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3B01A2A984B5500717539 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D851F37E2AB069E300081AD5 /* CornerRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusTextField.swift; sourceTree = "<group>"; };
+		D851F3802AB06C7900081AD5 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D851F3852AB06D1C00081AD5 /* NetflixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixModel.swift; sourceTree = "<group>"; };
 		D8E3AFCF2A9309FD00717539 /* SeSAC_Week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E3AFD22A9309FD00717539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E3AFD42A9309FD00717539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,9 @@
 		D8E3B0082A972A1200717539 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		D8E3B00E2A973E1A00717539 /* MovieAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		D8E3B0102A97500300717539 /* NetflixAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		D8E3B0152A982B0000717539 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D8E3B0172A9840AB00717539 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
+		D8E3B01A2A984B5500717539 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D851F3842AB06D0700081AD5 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D851F3802AB06C7900081AD5 /* Observable.swift */,
+				D851F3852AB06D1C00081AD5 /* NetflixModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
 		D8E3AFC62A9309FD00717539 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +105,8 @@
 		D8E3AFD12A9309FD00717539 /* SeSAC_Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				D851F3842AB06D0700081AD5 /* MVVM */,
+				D8E3B0192A984B1C00717539 /* Onboarding */,
 				D8E3B0032A971CAF00717539 /* CustomView */,
 				D8E3AFFE2A96F0D300717539 /* Generic */,
 				D8E3AFFB2A96293700717539 /* Data */,
@@ -144,8 +167,19 @@
 				D8E3B0042A971CE200717539 /* CustomViewController.swift */,
 				D8E3B0062A971E9300717539 /* BlackRadiusTextField.swift */,
 				D8E3B0082A972A1200717539 /* CustomTableViewController.swift */,
+				D8E3B0152A982B0000717539 /* CustomTableViewCell.swift */,
+				D8E3B0172A9840AB00717539 /* PosterImageView.swift */,
+				D851F37E2AB069E300081AD5 /* CornerRadiusTextField.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D8E3B0192A984B1C00717539 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D8E3B01A2A984B5500717539 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,17 +258,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D851F3812AB06C7900081AD5 /* Observable.swift in Sources */,
+				D851F37F2AB069E300081AD5 /* CornerRadiusTextField.swift in Sources */,
+				D8E3B0162A982B0000717539 /* CustomTableViewCell.swift in Sources */,
 				D8E3AFF12A945CA800717539 /* TextViewController.swift in Sources */,
+				D8E3B0182A9840AB00717539 /* PosterImageView.swift in Sources */,
 				D8E3AFFA2A96292800717539 /* sampleCode_map.swift in Sources */,
 				D8E3AFEF2A94468100717539 /* SnapViewController.swift in Sources */,
 				D8E3B0112A97500300717539 /* NetflixAutoLayoutViewController.swift in Sources */,
 				D8E3AFFD2A962B5400717539 /* TheaterLocationViewController.swift in Sources */,
+				D8E3B01B2A984B5500717539 /* OnboardingViewController.swift in Sources */,
 				D8E3B00F2A973E1A00717539 /* MovieAutoLayoutViewController.swift in Sources */,
 				D8E3B0092A972A1200717539 /* CustomTableViewController.swift in Sources */,
 				D8E3AFD72A9309FD00717539 /* ViewController.swift in Sources */,
 				D8E3AFF82A94A09700717539 /* AutoLayoutEx2ViewController.swift in Sources */,
 				D8E3B0052A971CE200717539 /* CustomViewController.swift in Sources */,
 				D8E3B0072A971E9300717539 /* BlackRadiusTextField.swift in Sources */,
+				D851F3862AB06D1C00081AD5 /* NetflixModel.swift in Sources */,
 				D8E3B0002A96F10800717539 /* GenericViewController.swift in Sources */,
 				D8E3AFF32A94792E00717539 /* LocationViewController.swift in Sources */,
 				D8E3B0022A96F11C00717539 /* Extension+UIViewController.swift in Sources */,
